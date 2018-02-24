@@ -15,12 +15,17 @@ class App extends Component {
     let posts = this.state.posts
     return (
       <div className="App">
-        <h1>Hello world</h1>
-        {
-          posts.map((post, index) => {
-            return <li key={index}>{post.title}</li>
-          })
-        }
+        <header></header>
+        <main>
+          <h1>Hello world</h1>
+          <h2><marquee>🔥🔥Fire Code🔥🔥</marquee></h2>
+          {
+            posts.map((post, index) => {
+              return <li key={index}>{post.title}</li>
+            })
+          }
+        </main>
+        <footer></footer>
       </div>
     )
   }
