@@ -1,29 +1,18 @@
 import React, { Component } from 'react'
 // import '../css/App.css'
 import axios from 'axios'
+import PostContainer from './PostContainer'
+import { Switch, Route } from 'react-router-dom'
 
 class App extends Component {
-  state = {
-    posts: []
-  }
-
-  componentDidMount() {
-    axios.get('http://localhost:8000/api/')
-    .then(response => this.setState({posts: response.data}))
-  }
   render() {
-    let posts = this.state.posts
-    // console.log('posts is ', posts)
     return (
       <div className="App">
-        <header></header>
+        <header><h1>Got Game?</h1></header>
         <main>
-          <h1>Got Game?</h1>
-          {
-            posts.map((post, index) => {
-              return <li key={index}>{post.title}</li>
-            })
-          }
+          <Switch>
+            <PostContainer />
+          </Switch>
         </main>
         <footer></footer>
       </div>
