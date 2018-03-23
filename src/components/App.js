@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Switch, Route }    from 'react-router-dom'
 import Landing              from './Landing'
 import Header               from './Header'
@@ -7,10 +7,12 @@ import PostContainer        from './PostContainer'
 import PostDetail           from './PostDetail'
 import PostEdit             from './PostEdit'
 import PostAdd              from './PostAdd'
+import ThemeProvider        from 'react-emotion'
+import theme                from '../theme'
 import '../css/App.css'
 
-class App extends Component {
-  render() {
+const App = props => {
+  <ThemeProvider theme={theme}>
     return (
       <div className="App">
         <Header />
@@ -32,7 +34,7 @@ class App extends Component {
         <Footer />
       </div>
     )
-  }
+  </ThemeProvider>
 }
 
 export default App
