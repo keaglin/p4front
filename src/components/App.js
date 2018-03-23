@@ -7,12 +7,12 @@ import PostContainer        from './PostContainer'
 import PostDetail           from './PostDetail'
 import PostEdit             from './PostEdit'
 import PostAdd              from './PostAdd'
-import ThemeProvider        from 'react-emotion'
-import theme                from '../theme'
+// import ThemeProvider        from 'react-emotion'
+// import theme                from '../theme'
 import '../css/App.css'
 
 const App = props => {
-  <ThemeProvider theme={theme}>
+  // <ThemeProvider theme={theme}>
     return (
       <div className="App">
         <Header />
@@ -34,7 +34,7 @@ const App = props => {
         <Footer />
       </div>
     )
-  </ThemeProvider>
+  // </ThemeProvider>
 }
 
 export default App

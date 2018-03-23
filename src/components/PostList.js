@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
+import styled from 'react-emotion'
 
 const PostList = (props) => {
+  const Li = styled.li`
+    list-style: none
+  `
   let posts = props.posts
   return (
     <div>
-      {
-        posts.map((post, index) => {
-          return <li key={index}>{post.title}</li>
-        })
-      }
+      <ul>
+        {
+          posts.map((post, index) => {
+            return <Li key={index}>{post.title}</Li>
+          })
+        }
+      </ul>
     </div>
   )
 }
