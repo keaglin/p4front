@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
 	return (
+		// <div  className="column">
 		<header>
+			{/* <div className="columns"> */}
 			<nav className="navbar" aria-label="main navigation">
-				<div className="navbar-brand">
+				<div className="navbar-brand level-left">
 					<Link to='/'>Got Game?</Link>
 					<div className="navbar-burger">
 						<span></span>
@@ -13,7 +15,7 @@ const Header = () => {
 						<span></span>
 					</div>
 				</div>
-				<div className="navbar-menu">
+				<div className="navbar-menu level-right">
 					<div className="navbar-start">
 						{/* navigation */}
 						<Link className="nav-item" to='/posts'>Posts</Link>
@@ -27,17 +29,9 @@ const Header = () => {
 					</div>
 				</div>
 			</nav>
-			{/* <nav className="navbar">
-				<div className="nav-wrapper">
-					<a href="#" className="brand-logo">Got Game?</a>
-					<ul id="nav-mobile" className="right hide-on-med-and-down">
-						<Link to='/posts'>Posts</Link>
-						<Link to='#'>Sign Up</Link>
-						<Link to='#'>Login</Link>
-					</ul>
-				</div>
-			</nav> */}
+		{/* </div> */}
 		</header>
+		// </div>
 	) 
 }
 
